@@ -13,26 +13,26 @@ echo "== Take a deep breath..."
 # we need this as the node is crashing if we go on too fast
 sleep 5s
 
-# check if init already done
-if [ -f /opt/easy-nano-node/init ]; then
+# # check if init already done
+# if [ -f /opt/easy-nano-node/init ]; then
 
-  echo "== Initialization already done, skipping ..."
+#   echo "== Initialization already done, skipping ..."
 
-else
+# else
 
-  # echo "== Opening Nano Node Port"
-  # sudo ufw allow 7075
+#   # echo "== Opening Nano Node Port"
+#   # sudo ufw allow 7075
 
-  # echo "== Opening RPC Port"
-  # sudo ufw allow 80
+#   # echo "== Opening RPC Port"
+#   # sudo ufw allow 80
 
-  echo "== Restarting Nano node container"
-  sudo docker restart enn_nanonode_1
+#   echo "== Restarting Nano node container"
+#   sudo docker restart enn_nanonode_1
 
-  # we're done, save for later
-  touch /opt/easy-nano-node/init
+#   # we're done, save for later
+#   touch /opt/easy-nano-node/init
 
-fi
+# fi
 
 # get that nasty IP
 serverip=$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')
