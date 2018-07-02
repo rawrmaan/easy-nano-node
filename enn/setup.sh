@@ -20,11 +20,11 @@ if [ -f /opt/easy-nano-node/init ]; then
 
 else
 
-  echo "== Opening Nano Node Port"
-  sudo ufw allow 7075
+  # echo "== Opening Nano Node Port"
+  # sudo ufw allow 7075
 
-  echo "== Opening RPC Port"
-  sudo ufw allow 80
+  # echo "== Opening RPC Port"
+  # sudo ufw allow 80
 
   echo "== Restarting Nano node container"
   sudo docker restart enn_nanonode_1
