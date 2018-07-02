@@ -3,9 +3,6 @@
 # goto script dir
 cd "$(dirname "$0")"
 
-echo "== Updating Docker images"
-sudo docker pull nanocurrency/nano
-
 echo "== Starting Docker containers"
 sudo docker-compose up -d
 
