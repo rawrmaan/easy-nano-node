@@ -8,11 +8,9 @@ services:
      - "7075:7075"
      - "::1:7076:7076"
      - "80:80"
-     - "::1:80:80"
     volumes:
      - "~:/root"
   watchtower:
     image: "v2tec/watchtower"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-      
