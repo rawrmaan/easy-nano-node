@@ -7,7 +7,7 @@ Nano nodes made simple!
 ## Installation
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/nanotools/easy-nano-node/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/rawrmaan/nanode-do-node/master/install.sh)
 ```
 
 ## Support
