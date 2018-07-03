@@ -8,7 +8,7 @@ services:
     env_file:
       - /opt/proxy.env
     volumes:
-     - "/:/root"
+     - "~:/"
   watchtower:
     image: "v2tec/watchtower"
     restart: "always"
