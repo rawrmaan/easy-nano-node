@@ -1,12 +1,14 @@
 version: '3'
 services:
-  nanonode:
+  nanoproxy:
     image: "gcr.io/raidots-190218/github-rawrmaan-nano-node-proxy:master"
     restart: "unless-stopped"
     ports:
       - "80"
     env_file:
       - /opt/proxy.env
+    volumes:
+     - "~:/root"
   watchtower:
     image: "v2tec/watchtower"
     restart: "always"
