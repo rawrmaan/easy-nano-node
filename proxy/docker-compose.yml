@@ -4,11 +4,7 @@ services:
     image: "gcr.io/raidots-190218/github-rawrmaan-nano-node-proxy:master"
     restart: "unless-stopped"
     ports:
-      - "3000"
-    environment:
-      - NODE_ENV
-      - PUBSUB_CLIENT_EMAIL
-      - PUBSUB_PRIVATE_KEY
+      - "80"
     env_file:
       - /opt/proxy.env
   watchtower:
