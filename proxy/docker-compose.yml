@@ -4,7 +4,7 @@ services:
     image: "gcr.io/raidots-190218/github-rawrmaan-nano-node-proxy:master"
     restart: "unless-stopped"
     ports:
-      - "80"
+      - "80:80"
     env_file:
       - /opt/proxy.env
     volumes:
