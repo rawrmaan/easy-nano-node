@@ -6,6 +6,10 @@ cd "$(dirname "$0")"
 echo "== Starting Docker containers"
 sudo docker-compose up -d
 
+# install service
+sudo cp ./docker-compose-app.service /etc/systemd/system/docker-compose-app.service
+sudo systemctl enable docker-compose-app
+
 # get that nasty IP
 serverip=$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')
 
